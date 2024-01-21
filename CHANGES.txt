@@ -1,0 +1,6 @@
+v1.0.1
+- Added reboot message.
+- Minor bug fix.
+
+v1.0.0
+- First release.
