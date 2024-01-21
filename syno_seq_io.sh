@@ -16,7 +16,7 @@
 # If no parameter the script defaults to 0
 #------------------------------------------------------------------------------
 
-scriptver="v1.0.0"
+scriptver="v1.0.1"
 script=Synology_enable_sequential_IO
 repo="007revad/Synology_enable_sequential_IO"
 #scriptname=syno_seq_io
@@ -93,13 +93,25 @@ key="$(echo "$cacheval" | cut -d"=" -f1 | cut -d" " -f1)"
 synosetkeyvalue /etc/sysctl.conf "$key" "$kb"
 
 # Check we set key value
-check="$(synosetkeyvalue /etc/sysctl.conf "$key")"
+check="$(synogetkeyvalue /etc/sysctl.conf "$key")"
 if [[ "$check" == "$kb" ]]; then
     echo -e "Sequential I/O for $cachevol cache is enabled.\n"
 elif [[ -z "$check" ]]; then
     echo -e "Sequential I/O for $cachevol cache is set to default.\n"
 else
     echo -e "Sequential I/O for $cachevol cache is set to $check.\n"
+fi
+
+echo -e "The Synology needs to restart.${Off}"
+echo -e "Type yes to reboot now."
+echo -e "Type anything else to quit (if you will restart it yourself)."
+read -r -t 10 answer
+if [[ ${answer,,} != "yes" ]]; then exit; fi
+
+if [[ -x /usr/syno/sbin/synopoweroff ]]; then
+    /usr/syno/sbin/synopoweroff -r || reboot
+else
+    reboot
 fi
 
 exit
