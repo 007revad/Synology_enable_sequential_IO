@@ -28,7 +28,27 @@ Run the script then reboot the Synology:
 sudo -i /volume1/scripts/syno_seq_io.sh
 ```
 
+### Scheduling the script in Synology's Task Scheduler
+
+To ensure that your cache(s) still have sequential I/O enabled after a reboot you should schedule the script to run at boot.
+
+See <a href=how_to_schedule.md/>How to schedule a script to run at boot in Synology Task Scheduler</a>
+
 ### Options
+
+```
+      --volumes=VOLUME  Volume or volumes to enable sequential I/O for
+                          Use when scheduling the script
+                          Examples:
+                          --volumes=volume_1
+                          --volumes=volume_1,volume_3,volume_4
+      --kb=KB           Set a specific sequential I/O kb value
+                          Use to disable sequential I/O
+                          --kb=1024
+  -e, --email           Disable colored text in output scheduler emails
+  -h, --help            Show this help message
+  -v, --version         Show the script version
+```
 
 You can run this script with a parameter to specify the skip_seq_thresh_kb
 
@@ -44,4 +64,14 @@ sudo -i /volume1/scripts/syno_seq_io.sh 1024
 
 ## Screenshots
 
+<p align="center">Enabling sequential I/O</p>
+<p align="center"><img src="/images/manual.png"></p>
+
+<p align="center">Reset a cache to 1024 KB to disable sequential I/O</p>
+<p align="center"><img src="/images/default.png"></p>
+
+<p align="center">Scheduled to enable sequential I/O for 2 caches with --volume option</p>
+<p align="center"><img src="/images/2caches.png"></p>
+
+<p align="center">Choose from multiple caches</p>
 <p align="center"><img src="/images/screenshot.png"></p>

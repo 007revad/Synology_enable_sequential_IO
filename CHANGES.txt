@@ -1,3 +1,12 @@
+v2.0.3
+- Added --volumes option to make it possible to schedule script to run at boot-up.
+  - You can specify multiple comma separated volumes.
+- Added --kb option to replace setting kb via first parameter.
+- Bug fix for "Not persistent across reboots" issue #2
+- Bug fix for when no caches are found.
+  - You need to schedule the script to run at boot-up.
+- Bug fix for when multiple caches are found.
+
 v1.0.1
 - Added reboot message.
 - Minor bug fix.
