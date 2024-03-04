@@ -30,6 +30,20 @@ sudo -i /volume1/scripts/syno_seq_io.sh
 
 ### Options
 
+```
+      --volumes=VOLUME  Volume or volumes to enable sequential I/O for
+                          Use when scheduling the script
+                          Examples:
+                          --volumes=volume_1
+                          --volumes=volume_1,volume_3,volume_4
+      --kb=KB           Set a specific sequential I/O kb value
+                          Use to disable sequential I/O
+                          --kb=1024
+  -e, --email           Disable colored text in output scheduler emails
+  -h, --help            Show this help message
+  -v, --version         Show the script version
+```
+
 You can run this script with a parameter to specify the skip_seq_thresh_kb
 
 For example the following would set the cache you select back to default
@@ -44,4 +58,14 @@ sudo -i /volume1/scripts/syno_seq_io.sh 1024
 
 ## Screenshots
 
+<p align="center">Enabling sequential I/O</p>
+<p align="center"><img src="/images/manual.png"></p>
+
+<p align="center">Reset a cache to 1024 KB to disable sequential I/O</p>
+<p align="center"><img src="/images/default.png"></p>
+
+<p align="center">Scheduled to enable sequential I/O for 2 caches with --volume option</p>
+<p align="center"><img src="/images/2caches.png"></p>
+
+<p align="center">Choose from multiple caches</p>
 <p align="center"><img src="/images/screenshot.png"></p>
