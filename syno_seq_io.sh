@@ -54,6 +54,7 @@ Usage: $(basename "$0") [options]
 
 Options:
       --volumes=VOLUME  Volume or volumes to enable sequential I/O for
+                          Use when scheduling the script
                           Examples:
                           --volumes=volume_1
                           --volumes=volume_1,volume_3,volume_4
