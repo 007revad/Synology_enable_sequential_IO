@@ -28,6 +28,12 @@ Run the script then reboot the Synology:
 sudo -i /volume1/scripts/syno_seq_io.sh
 ```
 
+### Scheduling the script in Synology's Task Scheduler
+
+To ensure that your cache(s) still have sequential I/O enabled after a reboot you should schedule the script to run at boot.
+
+See <a href=how_to_schedule.md/>How to schedule a script to run at boot in Synology Task Scheduler</a>
+
 ### Options
 
 ```
