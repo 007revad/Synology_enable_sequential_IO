@@ -20,8 +20,8 @@ To schedule a script to run on your Synology at boot-up follow these steps:
 
 Here's some screenshots showing what needs to be set:
 
-<p align="leftr"><img src="images/schedule1.png"></p>
+<p align="leftr"><img src="images/schedule-1.png"></p>
 
-<p align="leftr"><img src="images/schedule2.png"></p>
+<p align="leftr"><img src="images/schedule-2.png"></p>
 
-<p align="leftr"><img src="images/schedule3.png"></p>
+<p align="leftr"><img src="images/schedule-3.png"></p>
