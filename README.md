@@ -9,7 +9,7 @@
 
 Enables sequential I/O for your SSD caches, like DSM 6 had.
 
-**Note:** Monitor your NVMe drive and 10G card temperature. There have been reports that enabling sequential I/O for an SSD cache can cause a 10G network card to overheat (which may be why Synology disabled SSD cache sequential I/O from DSM 7 onwards.
+**Note:** Monitor your NVMe drive and 10G card temperature. There have been reports online that enabling sequential I/O for an SSD cache can cause a 10G network card to overheat (which may be why Synology disabled SSD cache sequential I/O from DSM 7 onwards). It will also wear out the NVMe drive(s) much faster.
 
 ### Download the script
 
